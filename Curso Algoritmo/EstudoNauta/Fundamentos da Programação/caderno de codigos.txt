@@ -1,0 +1,148 @@
+programa
+{
+	
+	funcao inicio()
+	{
+	inteiro idade
+	cadeia nome  
+	cadeia local 
+	
+	escreva("Quantos anos você tem? ")
+	leia (idade)
+	escreva("\n")
+	escreva("Qual seu nome: ")
+	leia(nome)
+	escreva("Onde você mora: ")
+	leia(local)
+	escreva("Voce tem "+idade+" anos de idade.\n")
+	escreva("Seu nome é "+nome+"\n")
+	escreva("Você mora em "+local+"\n")
+	}
+-------------------------------------------------------------------------------------------
+EXERCICIO 001 E 002
+
+programa
+{
+	funcao inicio()
+	{
+	cadeia nome
+	inteiro dn
+	real salario
+	escreva("Nome do Funcionario: ")
+	leia(nome)
+	escreva("Ano de Nascimento: ")
+	leia(dn)
+	escreva("Salário: R$ ")
+	leia(salario)
+	escreva("\n")
+	escreva("----------- FICHA FUNCIONAL-----------\n")
+	escreva("Nome: "+nome+"\n")
+	escreva("Nascimento: "+dn+"\n")
+	escreva("Salário de R$ "+salario+"\n")
+	escreva("---------------------------------------")	
+	}
+}
+-----------------------------------------------------------------------------------------
+programa
+{
+	
+inclua biblioteca Util// incluindo bibliotecas
+	funcao inicio()
+	{
+		inteiro n = Util.sorteia (0, 50)
+		escreva("Sorteando...Aguarde...!!")
+		Util.aguarde(2000) 
+		escreva("Eu gerei um número ",n)
+		Util.aguarde(2000)
+		escreva("...è isso!!")
+	}
+}
+------------------------------------------------------------------------------------------
+ESTRUTURA DE REPETIÇÃO - ENQUANTO
+
+programa
+{// programa pergunta quantas vezes quer somar, soma os valores digitados e e depois 
+// faz a média pelo numero de vezes que quis somar.
+	inclua biblioteca Matematica -->m
+	inclua biblioteca Tipos --> t
+	
+	funcao inicio()
+	{
+		inteiro c, n1, r, x 
+		real m, ar
+		m = 0
+		c = 1
+		r = 0
+		escreva("Quantas vezes quer somar? ")
+		leia(x)
+		enquanto(c<=x){
+		escreva("Digite um numero o "+c+"o: ")
+		leia(n1)
+		r = r + n1
+		m = r / x
+		c++
+		}
+		escreva("O resultado é: ",r)
+		ar=m.arredondar(m,2)
+		escreva("\nA média dos números digitador é: ", (t.inteiro_para_real (r) /x))
+	}
+		
+}
+------------------------------------------------------------------------------------------
+programa
+{
+// ESTE PROGRAMA FAZ A CONTAGEM DE DETERMINADO TIPO DE CARACTER ATRAVES DA SOLICITAÇÃO 
+// DA QUANTIDADE A SER FEITA
+	
+	funcao inicio()
+	{
+		inteiro c, sf, sm, p
+		caracter sx
+		c = 1
+		sf = 0
+		sm = 0
+		escreva("Digite quantas pessoas: ")
+		leia(p)
+		enquanto (c<=p){
+		escreva("Qual sexo [m/f]: ")
+		leia(sx)
+		se (sx=='m' ou sx== 'M'){
+			sm++
+		}
+		se (sx=='f' ou sx=='F'){
+			sf++
+		}
+		c++
+		}
+		escreva("O total de Meninos é: ",sm)
+		escreva("\nO total de Meninas é: ",sf)
+	}
+}
+
+----------------------------------------------------------------------------------------
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro c=1, ma=0, me=0, n
+		enquanto(c<=5){
+			escreva("Digite um número: ")
+			leia(n)
+			se (c==1){
+			ma = n
+			me = n
+			}senao {
+				se (n < me){
+				me = n
+				} 
+				se (n > ma) {
+					ma = n
+				}
+			}
+			c++
+		}
+		escreva("O maior numero foi: ",ma)
+		escreva("\nO menor número foi: ",me)
+	}
+}

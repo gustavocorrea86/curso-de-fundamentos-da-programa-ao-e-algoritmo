@@ -1,0 +1,1467 @@
+algoritmo "Contar de 1 a 5"
+var
+   c:inteiro
+inicio
+c<-1
+repita
+    escreva(c)
+    c<-c+1
+ate(c>5)
+fimalgoritmo
+-------------------------------------------------------------------------------------------'
+algoritmo "contador"
+var
+contador,n:inteiro
+inicio
+contador<-0
+escreva("digite um numero: ")
+leia (n)
+enquanto (contador<=n) faca
+         escreval(contador)
+         contador<-contador+3
+fimenquanto
+escreva("terminei")
+fimalgoritmo
+
+-----------------------------------------------------------------------------------------
+Que digite um numero e de quanto em quanto:
+
+algoritmo "contador"
+var
+contador,n,s:inteiro
+inicio
+contador<-0
+escreva("Digite um numero: ")
+leia (n)
+escreva("Qual o salto")
+leia (s)
+enquanto (contador<=n) faca
+         escreval(contador)
+         contador<-contador+s
+fimenquanto
+escreva("terminei")
+fimalgoritmo
+------------------------------------------------------------------------------------------
+algoritmo "contador2_e_menor_numero"
+var
+cont, n, s, m, me:inteiro
+inicio
+      cont<-1
+      enquanto (cont<=5) faca
+         escreva ("Digite o ",cont,"o. valor: ")
+         leia(n)
+         se (n>m)entao
+             m<-n
+             senao
+                  se (me<m) entao
+                  me<-n
+             fimse
+         fimse
+         s<-s+n
+         cont<-cont+1
+fimenquanto
+escreval("A soma de todos os valores foi ",s)
+escreval("O maior numero digitado é: ",m)
+escreva("O menor numero digitado é: ", me)
+fimalgoritmo
+------------------------------------------------------------------------------------------
+algoritmo "Criança_Esperança"
+var
+   d:inteiro
+   valor:real
+inicio
+escreval("----------------------------")
+escreval("    Criança Esperança       ")
+escreval("----------------------------")
+escreval("[1] Para doar R$ 10,00")
+escreval("[2] Para doar R$ 20,00")
+escreval("[3] Para doar R$ 30,00")
+escreval("[4} Para doar R$ 40,00")
+escreval("[5} Para digitar um valor")
+escreval("[6] Para cancelar")
+leia (d)
+escolha d
+       caso 1
+            valor<-10,00
+       caso 2
+            valor<-20,00
+       caso 3
+            valor<-30,00
+       caso 4
+            valor<-40,00
+       caso 5
+       escreva("Digite um valor: R$ ")
+       leia (valor)
+       caso 6
+            valor<-0,00
+            fimescolha
+            escreval("Valor doado R$: ",valor,"")
+            escreval("Muito Obrigado")
+
+
+fimalgoritmo
+-------------------------------------------------------------------------------------------
+algoritmo "salario_por_dependentes"
+var
+   n:caractere
+   sal, nsal:real
+   dep:inteiro
+inicio
+escreva("Nome do Funcionario: ")
+leia(n)
+escreva("Salário atual: R$ ")
+leia(sal)
+escreva("Número de Dependentes: ")
+leia (dep)
+escolha dep
+        caso 0
+             nsal<- sal+(sal*5/100)
+        caso 1,2,3
+             nsal<- sal+(sal*30/100)
+        caso 4,5,6
+             nsal<- sal+(sal*40/100)
+        outrocaso
+             nsal<- sal+(sal*50/100)
+        escreva("O Novo salário será R$ ", nsal)
+fimescolha
+escreva("O Novo salário será ", nsal)
+fimalgoritmo
+------------------------------------------------------------------------------------------
+algoritmo "CONTADOR_ENQUANTO_FACA"
+var
+   contador:inteiro
+inicio
+      contador<-0
+      enquanto(contador <= 10) faca
+      escreval(contador)
+      contador<-contador+1
+      fimenquanto
+fimalgoritmo
+-----------------------------------------------------------------------------------
+DESAFIO
+algoritmo "contador_inteligente"
+var
+contador,n,s:inteiro
+inicio
+escreval("-------------------------------")
+escreval("    CONTADOR INTELIGENTE       ")
+escreval("-------------------------------")
+escreva("Inicio: ")
+leia (n)
+escreva("Fim: ")
+leia (s)
+escreval("--------------------------------")
+escreval("           CONTANDO...           ")
+escreval("---------------------------------")
+contador<-n
+enquanto (contador<=s) faca
+         escreva("",contador,"...")
+         contador<-contador+1
+fimenquanto
+contador<-n
+enquanto (contador>=s) faca
+         escreva("",contador,"...")
+         contador<- contador-1
+fimenquanto
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "contador_Regressivo"
+var
+contador,n,s:inteiro
+inicio
+escreva("Inicio: ")
+leia(n)
+contador<-n
+enquanto (contador>=0) faca
+         escreva("",contador,"...")
+         contador<- contador-1
+fimenquanto
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "contador2_e_menor_e_maior_numero"
+var
+cont, n, s, m, me:inteiro
+inicio
+cont<-1
+       enquanto (cont<=5) faca
+       escreva ("Digite o ",cont,"o. valor: ")
+       leia(n)
+       se (n>m)entao
+       m<-n
+       senao
+            se(n<m) entao
+            me<-n
+            fimse
+       fimse
+       s<-s+n
+       cont<-cont+1
+fimenquanto
+escreval("A soma de todos os valores foi ",s)
+escreval("O maior numero digitado é: ",m)
+escreva("O menor numero digitado é: ", me)
+fimalgoritmo
+------------------------------------------------------------------------------------------
+algoritmo "o melhor aluno da turma"
+var
+   cont, n, m, me:inteiro
+   n1,s:caracter
+   al:inteiro
+inicio
+escreva("Quantos Alunos na Turma? ")
+leia(al)
+escreval("---------------------------------")
+cont<-1
+       enquanto (cont<=al) faca
+       escreval("ALUNO",cont)
+       escreva("O Nome do Aluno: ")
+       leia(n1)
+       escreva("Nota de ",n1,": ")
+       leia(n)
+       escreval("--------------------------------")
+       se (n>m)entao
+       m<-n
+       fimse
+       cont<-cont+1
+fimenquanto
+escreval("O melhor aproveitamento foi de ",n1," com a nota",m,": ")
+fimalgoritmo
+-----------------------------------------------------------------------------------------
+algoritmo "conta e soma os numero digitados"
+var
+cont, n, s,:inteiro
+inicio
+      cont<-1
+      enquanto (cont<=5) faca
+         escreva ("Digite o ",cont,"o. valor: ")
+         leia(n)
+         s<-s+n
+         cont<-cont+1
+fimenquanto
+escreval("A soma de todos os valores foi ",s)
+fimalgoritmo
+-------------------------------------------------------------------------------------------
+algoritmo "somador"
+var
+cont, n, s:inteiro
+inicio
+      cont<-1
+      enquanto (cont<=5) faca
+         escreva ("Digite o ",cont,"o. valor: ")
+         leia(n)
+         s<-s+n
+         cont<-cont+1
+fimenquanto
+escreval("A soma de todos os valores foi ",s)
+fimalgoritmo
+-----------------------------------------------------------------------------------------
+algoritmo ""
+var
+   n,s:inteiro
+   resp:caractere
+inicio
+resp <-"sim"
+Enquanto(resp="sim") faca
+escreva("Digite um numero: ")
+leia(n)
+s<- s+n
+escreva("Quer continuar? [sim/nao] ")
+leia(resp)
+fimenquanto
+escreva("A soma dos numeros digitados",s)
+fimalgoritmo
+------------------------------------------------------------------------------------------
+algoritmo "Repita2"
+var
+   n,s:inteiro
+   resp:caractere
+inicio
+repita
+escreval("Digite um numero: ")
+leia(n)
+s<- s+n
+escreval("Quer continuar? [sim/nao] ")
+leia(resp)
+ate(resp="nao")
+escreval("A soma dos numeros digitados",s)
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "CONTAR ATÉ O NUMERO DIGITADO"
+var
+	cont,n:inteiro
+inicio
+	cont<-1 // O CONTADOR VAI COMEÇAR PELO 1
+	escreva("digite um numero: ")
+	leia(n)//LER O NUMERO DIGITADO
+	repita
+	escreval(cont)//VAI MOSTRAR NA TELA A CONTAGEM
+	cont<-cont+5 // VAI DE 5 EM 5
+	ate(cont>n) // VAI CONTAR ATE O NUMERO DIGITADO
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "contar ate 10 com o repita"
+var
+	cont:inteiro
+inicio
+	cont<-1
+	repita
+	escreval(cont)
+	cont<-cont+1
+	ate(cont>10)
+
+fimalgoritmo
+--------------------------------------------------------------------------------------
+algoritmo "tabuada"
+var
+   cont, n, r: inteiro
+inicio
+cont<-1
+escreva("Digite o numero a ser multiplicado: ")
+leia(n)
+repita
+r <- n*cont
+escreval(n  , " x",cont," =", r)
+cont<-cont+1
+ate(cont>10)
+
+fimalgoritmo
+--------------------------------------------------------------------------------------
+algoritmo "contar numeros negativos"
+var
+n, c, totn:inteiro
+inicio
+c<-1
+totn<-0
+repita
+      escreva("digite um numero: ")
+      leia (n)
+      se (n<0) entao
+      totn<- totn+1
+      fimse
+      c<-c+1
+ate(c>5)
+escreval("Foram encontrados ",totn," valores negativos")
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "Fatorial"
+var
+   c, n, f:inteiro
+inicio
+      escreva("Digite um número: ")
+      leia(n)
+      c <- n
+      f <- 1
+      repita
+      f <- f * c
+      c <- c - 1
+ate (c<1)
+escreva(" O valor do fatorial é ",n," é igual a ",f)
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "Fatorial c/ quer continuar"
+var
+   c, n, f:inteiro
+   r:caracter
+inicio
+repita
+      escreva("Digite um número: ")
+      leia(n)
+      c <- n
+      f <- 1
+      repita
+      f <- f * c
+      c <- c - 1
+      ate (c<1)
+      escreval(" O valor do fatorial é ",n," é igual a ",f)
+escreval("Quer continuar? [s/n]")
+leia(r)
+limpatela
+ate(r="n")
+fimalgoritmo
+-----------------------------------------------------------------------------------------
+algoritmo "VAI CONTAR E MOSTRAR QUANTOS NUMEROS DIVISIVEIS TEM"
+var
+c,n,contDiv:inteiro
+inicio
+      c<-1 // CONTADOR VAI COMEÇAR NO 1
+      escreva("Digite um número: ")
+      leia(n)//VAI LER O NUMERO DIGITADO
+      repita
+            escreval(c)// VAI ESCREVER A CONTAGEM NA TELA
+            se (n % c=0) entao//VAI VERIFICAR SE O RESTO DA DIVISÃO DO NUMERO DIGITADO COM O CONTADOR É IGUAL A ZERO
+            contDiv<-contDiv+1// VAI ACRESCENTAR MAIS UMA VEZ A QUANTIDADE DE NUMEROS DIVISIVEL
+            fimse
+            c<-c+1//VAI CONTAR DE 1 EM 1 O CONTADOR
+      ate (c>n) // VAI CONTAR ATE O CONTADOR SER MAIOR QUE O NUMERO DIGITADO
+      escreval("Ao todo existem ",ContDiv," valores divisiveis")
+      //VAI MOSTRAR QUANTOS NUMEROS SAO DIVISIVEIS PELO NUMERO DIGITADO
+fimalgoritmo
+-------------------------------------------------------------------------------------------
+algoritmo "MOSTRA SE UM NUMERO É PRIMO"
+var
+c,n,contDiv:inteiro
+inicio
+      c<-1 // CONTADOR VAI COMEÇAR NO 1
+      escreva("Digite um número: ")
+      leia(n)//VAI LER O NUMERO DIGITADO
+      repita
+            se (n % c=0) entao//VAI VERIFICAR SE O RESTO DA DIVISÃO DO NUMERO DIGITADO COM O CONTADOR É IGUAL A ZERO
+            contDiv<-contDiv+1// VAI ACRESCENTAR MAIS UMA VEZ A QUANTIDADE DE NUMEROS DIVISIVEL
+            fimse
+            c<-c+1 // VAI CONTAR DE 1 EM 1 O CONTADOR
+      ate (c>n) // VAI CONTAR ATE O CONTADOR SER MAIOR QUE O NUMERO DIGITADO
+      escreval("Ao todo existem ",ContDiv," valores divisiveis")
+      //VAI MOSTRAR QUANTOS NUMEROS SAO DIVISIVEIS PELO NUMERO DIGITADO
+      se(contDiv>2) entao // SE O HOUVER MAIS DE 2 NUMEROS DIVISIVEIS
+      escreva("O Número",n," não é primo!")//O NUMERO DIGITADO NÃO É PRIMO
+      senao
+      escreval("O número",n," é primo!")// O NÚMERO DIGITADO É PRIMO
+      fimse
+fimalgoritmo
+-------------------------------------------------------------------------------------------
+algoritmo "CONTAR ATE 10 NO PARA_FIMPARA"
+var
+c:inteiro
+inicio
+para c<-1 ate 10 passo 1 faca
+     escreva (c)
+fimpara
+
+fimalgoritmo
+------------------------------------------------------------------------------------------
+algoritmo "CONTAR DE 10 ATE 1 NO PARA_FIMPARA"
+var
+c:inteiro
+inicio
+para c<-10 ate 1 passo -1 faca
+     escreva (c)
+fimpara
+
+fimalgoritmo
+------------------------------------------------------------------------------------------
+algoritmo "SOMAR 5 VALORES DIGITADOS (5X)"
+var
+c,s,n:inteiro
+inicio
+para c<-1 ate 5 passo 1 faca
+     escreva("Digite um numeor: ")
+     leia(n)
+     s<-s+n
+fimpara
+escreva("A soma dos numeros é: ",s)
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "SOMAR VALORES DIGITADOS ATÉ DIGITAR N)"
+var
+c,s,n:inteiro
+resp:caractere
+inicio
+c<-1
+repita
+     escreva("Digite um numero: ")
+     leia(n)
+     s<-s+n
+     escreval("Voce quer continuar? [s/n] ")
+     leia(resp)
+ate(resp="n")
+escreva("A soma dos numeros é: ",s)
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "O MELHOR ALUNO DA TURMA"
+var
+   cont, n, m, me,al:inteiro
+   n1,me1,ma,n2:caracter
+inicio
+escreva("Quantos Alunos na Turma? ")
+leia(al)
+escreval("---------------------------------")
+limpatela
+cont<-1
+       enquanto (cont<=al) faca
+                escreval("ALUNO",cont)
+                escreva("O Nome do Aluno: ")
+                leia(n1)
+                escreva("Nota de ",n1,": ")
+                leia(n)
+                escreval("--------------------------------")
+                     se (n>m)entao
+                     m<-n
+                     ma<-n1
+                     senao
+                           se(n<m) entao
+                           me<-n
+                           me1<-n1
+                           fimse
+                     fimse
+                     cont<-cont+1
+       limpatela
+       fimenquanto
+escreval("-----------------------------------------------------------")
+escreval("O melhor aproveitamento foi de ",ma," com a nota ",m)
+escreval(------------------------------------------------------------")
+escreval("O aluno com menor desempenho é ",me1," com a nota ",me)
+fimalgoritmo
+------------------------------------------------------------------------------------------
+
+algoritmo "APRESENTA OS NUMEROS PARES 2"
+var
+c,v:inteiro
+inicio
+escreva("Digite um valor: ")
+leia(v)
+se (v%2=1) entao
+   v<-v-1
+   fimse
+para c<-v ate 0 passo -2 faca
+escreva (c)
+fimpara
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "APRESENTA QUANTOS NUMEROS DIGITADOS DE 1 A 10"
+var
+c,v,t:inteiro
+inicio
+para c<-1 ate 5 faca
+escreva("Digite um valor: ")
+leia(v)
+se (v>=0) e (v<=10) entao
+   t<-t+1 // VAI CONTAR QUANTOS NUMEROS DE 1 A 10
+fimse
+fimpara
+escreva(" Ao tooo são",t," números digitados")
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "APRESENTA QUANTOS NUMEROS DIGITADOS DE 1 A 10"
+var
+c,v,t,imp,simp,par,spar,mdz,nimdz:inteiro
+inicio
+para c<-1 ate 8 faca
+escreva("Digite um valor: ")
+leia(v)
+se (v>=0) e (v<=10) entao
+   t<-t+1
+   senao
+   mdz<-mdz+1
+        se (v%2=1) entao // PARA SABER NUMEROS IMPARES
+        imp<-imp+1
+        fimse
+             se (v%2=1) entao // SOMA DOS NUMEROS IMPARES DOS NUMEROS DIGITADOS
+             simp<-simp+v
+             fimse
+                  se (v%2=0) entao // PARA SABER NUMEROS PARES
+                  par<-par+1
+                  fimse
+                       se (v%2=0) entao
+                       spar<-spar+v
+                       fimse
+                            se (v>10) e (v%2=1) entao
+                            nimdz<-nimdz+1
+                            fimse
+                            
+fimse
+fimpara
+escreval("Ao todo tem",t," números digitados de 0 a 10")
+escreval("Ao todo tem ",mdz," digitados maior que 10")
+escreval("Ao todo tem",imp," números impares de 0 a 10 e",nimdz," numeros impares maior que 10")
+escreval("A soma dos números impares de 0 a 10 é ",simp)
+escreval("Ao todo tem ",par," números pares e a soma desses números é",spar)
+fimalgoritmo
+-----------------------------------------------------------------------------------------
+algoritmo "COMBINAÇÕES"
+var
+c1, c2, c3:inteiro
+inicio
+      para c1:=1 ate 3 faca
+           para c2:= 1 ate 3 faca
+                para c3:= 1 ate 3 faca
+           escreval(c1,c2,c3)
+                fimpara
+           fimpara
+      fimpara
+fimalgoritmo
+-----------------------------------------------------------------------------------------
+algoritmo "SEQUÊNCIA FIBONACCI"
+var
+c,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13:inteiro
+inicio
+para c<-0 ate 1 faca
+escreva(c)
+fimpara
+       para c1<-1 ate 1 faca
+       escreva(c1)
+       fimpara
+              para c2<-2 ate 2 faca
+              escreva(c2)
+              fimpara
+                     para c3<-3 ate 3 faca
+                     escreva(c3)
+                     fimpara
+                     c4<-c2+c3
+                     escreva(c4)
+                     c5<-c3+c4
+                     escreva(c5)
+                     c6<-c4+c5
+                     escreva(c6)
+                     c7<-c5+c6
+                     escreva(c7)
+                     c8<-c6+c7
+                     escreva(c8)
+                     c9<-c7+c8
+                     escreva(c9)
+                     c10<-c8+c9
+                     escreva(c10)
+                     c11<-c9+c10
+                     escreva(c11)
+                     c12<-c10+c11
+                     escreva(c12)
+                     c13<-c11+c12
+                     escreva(c13)
+                     
+fimalgoritmo
+-----------------------------------------------------------------------------------------
+algoritmo "DESAFIO APRESENTE RESULTADOS"
+var
+c,n,s,dv,z,par:inteiro
+m:real
+inicio
+escreval("==============================================")
+escreval("       RESULTADO DOS VALORES DIGITADOS"        )
+escreval("==============================================")
+      para c<-1 ate 5 faca
+         escreva ("Digite o ",c,"o. valor: ")
+         leia(n)
+         s<-s+n
+         m<- s/5
+             se (n%5=0) entao
+             dv<-dv+1
+             fimse
+                  se (n=0) então
+                  z<-z+1
+                  fimse
+                       se(n%2=0) entao
+                       par<-par+n
+                       fimse
+      fimpara
+escreval("A soma de todos os valores foi: ",s)
+escreval("A média dos valores é: ",m)
+escreval("Valores divisiveis por 5 é: ",dv)
+escreval("Valores nulos: ",z)
+escreval("A soma dos valores pares é: ",par)
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "DETECTOR DE PESADO"
+var
+   i : inteiro
+   n, pesado: caractere
+   p, mai: real
+inicio
+limpatela
+escreval("===================================================")
+escreval("              DETECTORES DE PESADO                 ")
+escreval("    Maior peso até agora é de:",n," com ",mai,"Kg  ")
+escreval("===================================================")
+para i<- 1 ate 5 faca
+     escreva("DIGITE O NOME: ")
+     leia(n)
+     escreva("DIGITE O PESO DE ",n,": ")
+     leia(p)
+     se (p>mai) entao
+        mai <- p
+        pesado <- n
+     fimse
+     limpatela
+     limpatela
+     escreval("===================================================")
+     escreval("              DETECTORES DE PESADO                 ")
+     escreval("    Maior peso até agora é de:",n," com ",mai,"Kg  ")
+     escreval("===================================================")
+fimpara
+limpatela
+escreval("===================================================")
+escreval("              DETECTORES DE PESADO                 ")
+escreval("    Maior peso até agora é de:",n," com ",mai,"Kg  ")
+escreval("===================================================")
+escreval(" A pessoa mais pesada foi ",pesado," com ",mai," Kg")
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "DETECTOR DE PESADO com topo()"
+var
+   i : inteiro
+   n, pesado: caractere
+   p, mai: real
+procedimento topo()
+inicio
+limpatela
+escreval("===================================================")
+escreval("              DETECTORES DE PESADO                 ")
+escreval("    Maior peso até agora é de:",n," com ",mai,"Kg  ")
+escreval("===================================================")
+fimprocedimento
+inicio
+topo()
+para i<- 1 ate 5 faca
+     escreva("DIGITE O NOME: ")
+     leia(n)
+     escreva("DIGITE O PESO DE ",n,": ")
+     leia(p)
+     se (p>mai) entao
+        mai <- p
+        pesado <- n
+     fimse
+     topo()
+fimpara
+topo()
+escreval(" A pessoa mais pesada foi ",pesado," com ",mai," Kg")
+fimalgoritmo
+--------------------------------------------------------------------------------
+algoritmo "FAZ SOMA COM PROCEDIMENTO"
+var
+   x,y:inteiro
+   procedimento soma(a,b:inteiro)
+inicio
+escreval("Recebi o Valor ",a)
+escreval("Recebi o Valor ",b)
+escreval("A Soma dessa conta é ",a+b)
+fimprocedimento
+inicio
+      x<-10
+      y<-120
+      soma(x,y)
+fimalgoritmo
+------------------------------------------------------------------------------------
+algoritmo "PAR OU IMPAR PROCEDIMENTO"
+// PASSAGEM DE PARAMETRO POR VALOR
+var
+   n:inteiro
+procedimento parouimpar(v:inteiro)
+inicio
+      se(v%2=0) entao
+           escreval("Este número ",v," é Par")
+      senao
+           escreva("Este número ",v," é Impar")
+      fimse
+fimprocedimento
+inicio
+      escreva("Digite um número: ")
+      leia(n)
+      parouimpar(n)
+fimalgoritmo
+------------------------------------------------------------------------------------
+algoritmo "SOMA PARAMETROS REFERENCIA"
+// PASSAGEM DE PARAMETRO POR REFERENCIA
+var
+   x, y: inteiro
+procedimento soma ( a, b:inteiro)
+inicio
+      a<-a+1
+      b<-b+2
+      escreval("valor de a= ",a)
+      escreval("valor de b= ",b)
+      escreval("Soma a+b =", a+b)
+fimprocedimento
+inicio
+      x<-16
+      y<-19
+      soma(x,y)
+      escreval("valor de x= ",x)
+      escreval("valor de y= ",y)
+fimalgoritmo
+--------------------------------------------------------------------------------------
+algoritmo "SEQUENCIA DE FIBONACCI 2"
+var
+   c,t1,t2,t3: inteiro
+inicio
+      t1<-0
+      escreva(t1)
+      t2<-1
+      escreva(t2)
+      para c:= 1 ate 13 faca
+                 t3: =t1 + t2
+                 escreva(t3)
+                 t1:=t2
+                 t2:=t3
+      fimpara
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "PASSAGEM DE PARAMETRO POR VALOR"
+var
+   n1,n2:inteiro
+procedimento mult( x,y:real)
+inicio
+escreva(x/y)
+fimprocedimento
+inicio
+escreva("Digite um numero ")
+leia(n1)
+escreva("Digite outro numero ")
+leia (n2)
+mult(n1,n2)
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "DESAFIO_APROV.ALUNO"
+var
+   n:caracter
+   nt:real
+   a,c:inteiro
+inicio
+      escreva("Quanto alunos na Turma? ")
+      leia(a)
+             c<-1
+             repita
+            escreval("ALUNO ",c)
+            escreva("Nome do Aluno: ")
+            leia(n)
+            escreva("Nota de ",n,": ")
+            leia(nt)
+            c<-c+1
+      ate(c>a)
+fimalgoritmo
+------------------------------------------------------------------------------------------
+algoritmo "DESAFIO SELETOR DE PESSOAS"
+var
+   id,cab,cbl1,cbl2,cbl3,cbl4,M_id_ca,fem_id,c:inteiro
+   mf,resp:caractere
+   procedimento topo()
+inicio
+      escrevaL("===================================")
+      escreval("        SELETOR DE PESSOAS"         )
+      escreval("===================================")
+fimprocedimento
+inicio
+      resp<-"s"
+      c<-1
+      repita
+      topo()
+      escreval("Qual o Sexo? [m/f]")
+      leia(mf)
+      escreval("Qual Idade? ")
+      leia(id)
+      escreval("Qual a cor de cabelo? ")
+      escreval("[1] Preto")
+      escreval("[2] Castanho")
+      escreval("[3] Loiro")
+      escreval("[4] Ruivo")
+      leia(cab)
+      escolha cab
+              caso 1
+                    cbl1<-1
+              caso 2
+                    cbl2<-2
+              caso 3
+                    cbl3<-3
+              caso 4
+                    cbl4<-4
+      fimescolha
+      se(mf="m") e (id>=18) e (cab=cbl2) entao
+      M_id_ca<-M_id_ca+1
+      fimse
+           se(mf="f") e (id>=25) e (id<=30) e (cab=cbl3) entao
+           fem_id <- fem_id+1
+           fimse
+                escreval("Quer continuar? [s/n] ")
+                leia(resp)
+                topo()
+                limpatela
+      ate(resp="n")
+escreval("================================================================")
+escreval("                      RESULTADO FINAL                           ")
+ESCREVAL("================================================================")
+escreval("Total de Homens com mais de 18 anos e cabelos castanhos = ",M_id_ca)
+escreval("Total de Mulheres entre 25 e 30 anos e com cabelos loiros = ",fem_id)
+fimalgoritmo
+--------------------------------------------------------------------------------------
+algoritmo "CONTADOR COM VETOR"
+var
+v:vetor[1..5] de inteiro
+c:inteiro
+inicio
+      para c<-1 ate 5 faca
+           escreva("Digite um o",c,"o número: ")
+      leia (v[c])
+      fimpara
+      para c<-1 ate 5 faca
+           escreva("{",v[c],"}") // APRESENTA OS NUMEROS DIGITADOS 
+      fimpara
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "CONTADOR COM VETOR"
+var
+v:vetor[1..5] de inteiro
+c,p,i:inteiro
+inicio
+      para c<-1 ate 5 faca
+           escreva("Digite um o",c,"o número: ")
+      leia (v[c])
+           se(v[c]%2=0) entao
+            p<-p+1
+            senao
+            i<-i+1
+            fimse
+      fimpara
+      escreval("Total de números Par é ",p)
+      escreval("Total de números Impar é ",i)
+      para c<-1 ate 5 faca
+           se(v[c]%2=0) entao
+           escreval("Valor Par na posição",c)
+           fimse
+      fimpara
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "VERIFICA NUMEROS PARES E VÊ A POSIÇÃO DELES"
+var
+v:vetor[1..5] de inteiro
+c,p,i:inteiro
+inicio
+      para c<-1 ate 5 faca
+           escreva("Digite um o",c,"o número: ")
+      leia (v[c])
+           se(v[c]%2=0) entao
+            p<-p+1
+            senao
+            i<-i+1
+            fimse
+      fimpara
+      escreval("Total de números Par é ",p)
+      escreval("Total de números Impar é ",i)
+      para c<-1 ate 5 faca
+           se(v[c]%2=0) entao
+           escreval("Valor Par na posição",c)
+           fimse
+      fimpara
+fimalgoritmo
+------------------------------------------------------------------------------------------algoritmo "MEDIA DE ALUNOS COM VETOR"
+algoritmo "MEDIA DE ALUNOS COM VETOR"
+var
+   nome: vetor[1..4]de caractere
+   nota1: vetor[1..4]de inteiro
+   nota2: vetor[1..4]de inteiro
+   media: vetor[1..4]de real
+   contador: inteiro
+inicio
+   para contador<- 1 ate 4 faca
+      escreval("ALUNO",contador)
+      escreva("NOME: ")
+      leia(nome[contador])
+      escreva("PRIMEIRA NOTA: ")
+      leia(nota1[contador])
+      escreva("SEGUNDA NOTA: ")
+      leia(nota2[contador])
+      media[contador] <- (nota1[contador] + nota2[contador]) /2
+      escreval("----------------------------------------------")
+   fimpara
+   limpatela
+   escreval("LISTAGEM DE ALUNOS")
+   escreval("-------------------------")
+   para contador<-1 ate 4 faca
+        escreval(nome[contador]:15, media[contador])
+   fimpara
+
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "MEDIA DE ALUNOS COM VETOR c/ QTD ACIMA DA MÉDIA"
+var
+   nome: vetor[1..4]de caractere
+   nota1: vetor[1..4]de inteiro
+   nota2: vetor[1..4]de inteiro
+   media: vetor[1..4]de real
+   contador,tot: inteiro
+   sm, mt: real
+   al: caractere
+inicio
+   para contador<- 1 ate 4 faca
+      escreval("ALUNO",contador)
+      escreva("NOME: ")
+      leia(nome[contador])
+      escreva("PRIMEIRA NOTA: ")
+      leia(nota1[contador])
+      escreva("SEGUNDA NOTA: ")
+      leia(nota2[contador])
+      media[contador] <- (nota1[contador] + nota2[contador]) /2
+      sm<- sm + media[contador]
+      escreval("----------------------------------------------")
+   fimpara
+   mt<-sm/4
+   limpatela
+   escreval("LISTAGEM DE ALUNOS")
+   escreval("-------------------------")
+   para contador<-1 ate 4 faca
+        escreval(nome[contador]:15, media[contador])
+        se (media[contador] >=mt) entao
+        tot<-tot+1
+        fimse
+   fimpara
+   escreval("Ao todo temos",tot," alunos acima da média que é ",mt)
+
+fimalgoritmo
+--------------------------------------------------------------------------------
+algoritmo "NOMES QUE SO COMEÇAM COM A LETRA C"
+var
+   nome:caractere
+   soC:vetor[1..10] de caractere
+   c, tot: inteiro
+inicio
+      para c<-1 ate 10 faca
+      escreva("Digite seu nome: ")
+      leia (nome)
+            se (copia(maiusc(nome), 1,1)="C") entao // faz a copia dos nomes que começam com a letre c MAIUSCULA
+            tot <-tot+1
+            soC[tot]<-nome
+            fimse
+      fimpara
+      limpatela
+      escreval("LISTAGEM FINAL")
+      para c<-1 ate tot faca
+      escreval(soC[c])
+      fimpara
+fimalgoritmo
+-----------------------------------------------------------------------------------------
+algoritmo "ORDENAÇÃO DE VETORES"
+var
+   vet: vetor[1..5] de inteiro
+   i,j, aux: inteiro
+inicio
+      para i <- 1 ate 5 faca
+           escreva("Digite um número: ")
+           leia(vet[i])
+      fimpara
+      para i<-1 ate 4 faca
+          para j<- i+1 ate 5 faca
+           se (vet[i] > vet[j]) entao
+           aux<- vet[i]
+           vet[i]<-vet[j]
+           vet[j]<-aux
+           fimse
+          fimpara
+      fimpara
+      para i <- 1 ate 5 faca
+           escreva("{",vet[i],"}")
+      fimpara
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "DESAFIO TORNEIO DE FUTEBOL"
+var
+   vet:vetor [1..3] de caractere
+   v1, v2, v3:caractere
+   c,c1,c2,c3:inteiro
+   procedimento topo()
+   inicio
+   escreval("========================================")
+   escreval("         CAMPEONATO DE FUTEBOL          ")
+   escreval("========================================")
+   fimprocedimento
+inicio
+      topo()
+      para c<-1 ate 3 faca
+           escreva("Nome do ",c,"o Time: ")
+           leia(vet[c])
+      fimpara
+      limpatela
+      topo()
+      para c1 <- 1 ate 1 faca
+           escreval("",vet[1]:15," [ ]  X  [ ]  ",vet[2],"")
+           escreval("",vet[1]:15," [ ]  X  [ ]  ",vet[3],"")
+      fimpara
+           para c1 <- 1 ate 1 faca
+                escreval("",vet[2]:15," [ ]  X  [ ]  ",vet[1],"")
+                 escreval("",vet[2]:15," [ ]  X  [ ]  ",vet[3],"")
+           fimpara
+                  para c1 <- 1 ate 1 faca
+                       escreval("",vet[3]:15," [ ]  X  [ ]  ",vet[1],"")
+                       escreval("",vet[3]:15," [ ]  X  [ ]  ",vet[2],"")
+                  fimpara
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "DESAFIO CORRIGINDO PROVAS"
+var
+   vet_gab:vetor[1..5] de caractere
+   vet_nome:vetor[1..3] de caractere
+   vet_nota:vetor[1..5] de caractere
+   c,c1,c2:inteiro
+   n1:caractere
+inicio
+    para c <- 1 ate 5 faca
+         escreva ("Questão ",c,": ")
+         leia(vet_gab[c])
+         vet_gab[1}<-2
+         vet_gab[2}<-2
+         vet_gab[3}<-2
+         vet_gab[4}<-2
+         vet_gab[5}<-2
+    fimpara
+    limpatela
+         escreva("Nome: ")
+         leia(vet_nome[1])
+         escreval("RESPOSTAS DADAS")
+         para c1<- 1 ate 5 faca
+              escreva("Questão",c1,": ")
+              leia(vet_nota[c1])
+         fimpara
+         limpatela
+                       escreva("Nome: ")
+                       leia(vet_nome[2])
+                       escreval("RESPOSTAS DADAS")
+                       para c1<- 1 ate 5 faca
+                            escreva("Questão",c1,": ")
+                            leia(vet_nota[c1])
+                       fimpara
+                       limpatela
+                                     escreva("Nome: ")
+                                     leia(vet_nome[3])
+                                     escreval("RESPOSTAS DADAS")
+                                     para c2<- 1 ate 5 faca
+                                          escreva("Questão",c2,": ")
+                                          leia(vet_nota[c2])
+                                     fimpara
+                                     limpatela
+
+
+fimalgoritmo
+-----------------------------------------------------------------------------------------
+algoritmo "semnome"
+var
+   q1,q2,q3,q4,q5,a1,q1a1,q2a1,q3a1,q4a1,q5a1,a2,q1a2,q2a2,q3a2,q4a2,q5a2,a3,q1a3,q2a3,q3a3,q4a3,q5a3:caractere
+inicio
+escreval("==============================================")
+escreval("             CORRIGINDO PROVAS                ")
+escreval("==============================================")
+escreval("                  GABARITO                    ")
+escreval("==============================================")
+escreva("questao 1o: ")
+leia(q1)
+escreva("questao 2o: ")
+leia(q2)
+escreva("questao 3o: ")
+leia(q3)
+escreva("questao 4o: ")
+leia(q4)
+escreva("questao 5o: ")
+leia(q5)
+limpatela
+escreva("prova de: ")
+leia(a1)
+escreval("RESPOSTAS DADAS")
+escreva("questao 1o: ")
+leia(q1a1)
+escreva("questao 2o: ")
+leia(q2a1)
+escreva("questao 3o: ")
+leia(q3a1)
+escreva("questao 4o: ")
+leia(q4a1)
+escreva("questao 5o: ")
+leia(q5a1)
+limpatela
+escreva("prova de: ")
+leia(a2)
+escreval("RESPOSTAS DADAS")
+escreva("questao 1o: ")
+leia(q1a2)
+escreva("questao 2o: ")
+leia(q2a2)
+escreva("questao 3o: ")
+leia(q3a2)
+escreva("questao 4o: ")
+leia(q4a2)
+escreva("questao 5o: ")
+leia(q5a2)
+limpatela
+escreva("prova de: ")
+leia(a3)
+escreval("RESPOSTAS DADAS")
+escreva("questao 1o: ")
+leia(q1a3)
+escreva("questao 2o: ")
+leia(q2a3)
+escreva("questao 3o: ")
+leia(q3a3)
+escreva("questao 4o: ")
+leia(q4a3)
+escreva("questao 5o: ")
+leia(q5a3)
+limpatela
+fimalgoritmo
+---------------------------------------------------------------------------------------
+algoritmo "DESAFIO CORRIGINDO PROVAS"
+var
+   gab:vetor[1..5] de caractere
+   nota:vetor[1..5] de caractere
+   nota1:vetor[1..5] de inteiro
+   nome:vetor[1..3] de caractere
+   c,c1,c2,c3,nt1,v1,v2,v3,v4,v5:inteiro
+   q,nt:caractere
+
+inicio
+escreval("==============================================")
+escreval("             CORRIGINDO PROVAS                ")
+escreval("==============================================")
+escreval("                  GABARITO                    ")
+escreval("==============================================")
+    para c <- 1 ate 5 faca
+         escreva ("Questão ",c,"o: ")
+         leia(q)
+         gab[c]<-q
+         se (gab[1]="a") entao
+         v1<-2
+         fimse
+              se(gab[2]="b") entao
+              v2<-2
+              fimse
+                   se(gab[3]="c") entao
+                   v3<-2
+                   fimse
+                        se(gab[4]="d") entao
+                        v4<-2
+                        fimse
+                             se(gab[5]="e") entao
+                             v5<-2
+                             fimse
+    fimpara
+    limpatela
+    para c<-1 ate 3 faca
+         escreva("PROVA DE: ")
+         leia(nome[c])
+         escreval("RESPOSTAS DADAS")
+         para c1 <- 1 ate 5 faca
+              escreva("Questão",c1,": ")
+              leia(nt)
+              nota[c1]<-nt
+              se(nota[1]=)entao
+              nt1<-2
+              fimse
+
+         fimpara
+    limpatela
+    fimpara
+    se(nota[1]=a) entao
+              nt1<-nt1+2
+              fimse
+fimalgoritmo
+----------------------------------------------------------------------------------------
+algoritmo "DESAFIO CORRIGINDO PROVAS"
+var
+   gab:vetor[1..5] de caractere
+   //nota:vetor[1..5] de caractere
+   nota1:vetor[1..5] de caractere
+   //nota2:vetor[1..5] de inteiro
+   //nota3:vetor[1..5] de inteiro
+   nome:vetor[1..3] de caractere
+   c,c1,c2,c3,nt1,nt2,nt3:inteiro
+   ntt:real
+   q,nt:caractere
+
+inicio
+escreval("==============================================")
+escreval("             CORRIGINDO PROVAS                ")
+escreval("==============================================")
+escreval("                  GABARITO                    ")
+escreval("==============================================")
+    para c <- 1 ate 5 faca
+         escreva ("Questão ",c,"o: ")
+         leia(gab[c])
+    fimpara
+    limpatela
+         escreva("PROVA DE: ")
+         leia(nome[1])
+         escreval("RESPOSTAS DADAS")
+         para c1 <- 1 ate 5 faca
+              escreva("Questão",c1,": ")
+              leia(nota1[c1])
+              nt1<-0
+              se((nota1[1]="a")e(gab[1]="a")) entao
+              nt1<-nt1+2
+              fimse
+                   se(nota1[2]="b")e(gab[2]="b") entao
+                   nt1<-nt1+2
+                   fimse
+                       se(nota1[3]="c")e(gab[3]="c") entao
+                       nt1<-nt1+2
+                       fimse
+                          se(nota1[4]="d")e(gab[4]="d") entao
+                          nt1<-nt1+2
+                          fimse
+                               se(nota1[5]="e")e(gab[5]="e") entao
+                               nt1<-nt1+2
+                               fimse
+         fimpara
+         limpatela
+         escreva("PROVA DE: ")
+         leia(nome[2])
+         escreval("RESPOSTAS DADAS")
+         para c2 <- 1 ate 5 faca
+              escreva("Questão",c2,": ")
+              leia(nota1[c2])
+              nt2<-0
+              se((nota1[1]="a")e(gab[1]="a")) entao
+              nt2<-nt2+2
+              fimse
+                   se(nota1[2]="b")e(gab[2]="b") entao
+                   nt2<-nt2+2
+                   fimse
+                       se(nota1[3]="c")e(gab[3]="c") entao
+                       nt2<-nt2+2
+                       fimse
+                          se(nota1[4]="d")e(gab[4]="d") entao
+                          nt2<-nt2+2
+                          fimse
+                               se(nota1[5]="e")e(gab[5]="e") entao
+                               nt2<-nt2+2
+                               fimse
+         fimpara
+         limpatela
+         escreva("PROVA DE: ")
+         leia(nome[3])
+         escreval("RESPOSTAS DADAS")
+         para c3 <- 1 ate 5 faca
+              escreva("Questão",c3,": ")
+              leia(nota1[c3])
+              nt3<-0
+              se((nota1[1]="a")e(gab[1]="a")) entao
+              nt3<-nt3+2
+              fimse
+                   se(nota1[2]="b")e(gab[2]="b") entao
+                   nt3<-nt3+2
+                   fimse
+                       se(nota1[3]="c")e(gab[3]="c") entao
+                       nt3<-nt3+2
+                       fimse
+                          se(nota1[4]="d")e(gab[4]="d") entao
+                          nt3<-nt3+2
+                          fimse
+                               se(nota1[5]="e")e(gab[5]="e") entao
+                               nt3<-nt3+2
+                               fimse
+         fimpara
+         limpatela
+         escreval("aluno",nome[1]," nota ",nt1)
+         escreval("aluno",nome[2]," nota ",nt2)
+         escreval("aluno",nome[3]," nota ",nt3)
+         ntt<-(nt1+nt2+nt3)/3
+         escreval("Media da turma é ",ntt:2:2)
+fimalgoritmo
+-------------------------------------------------------------------------------------
+algoritmo "LENDO MATRIZES"
+var
+mat:vetor[1..3, 1..2] de inteiro
+l,c:inteiro
+inicio
+para l<-1 ate 3 faca
+     para c<-1 ate 2 faca
+     escreva("Digite um número: ")
+     leia(mat[l,c])
+     fimpara
+fimpara
+para l<-1 ate 3 faca
+     para c<-1 ate 2 faca
+     escreva(mat[l,c])
+     fimpara
+     escreval()
+fimpara
+     
+
+fimalgoritmo
+------------------------------------------------------------------------------------------
+algoritmo "IDENTIFICANDO MATRIZES PARES"
+var
+val:vetor[1..3,1..3] de inteiro
+l,c: inteiro
+totpar:inteiro
+inicio
+para l<- 1 ate 3 faca
+     para c<- 1 ate 3 faca
+     escreva("Digite valores: ")
+     leia(val[l,c])
+     fimpara
+fimpara
+para l<- 1 ate 3 faca
+     para c<- 1 ate 3 faca
+          se(val[l,c]%2=0) entao
+              escreva("{",val[l,c]:2,"}")
+              totpar<-totpar+1
+          senao
+               escreva(val[l,c]:3)
+          fimse
+     fimpara
+     escreval()
+fimpara
+escreva("Quantidade numeros pares é",totpar)
+
+fimalgoritmo
+--------------------------------------------------------------------------------------
+algoritmo " MATRIZ IDENTIDADE"
+var
+   mid:vetor[1..3, 1..3] de inteiro
+   l,c: inteiro
+inicio
+para l<- 1 ate 3 faca
+     para c<- 1 ate 3 faca
+          se (l=c) entao
+          mid[l,c] <-1
+          senao
+          mid[l,c] <-0
+          fimse
+     fimpara
+fimpara
+para l<-1 ate 3 faca
+     para c<- 1 ate 3 faca
+     escreva(mid[l,c]:3)
+     fimpara
+     escreval() // mostra de forma matriz
+fimpara
+
+fimalgoritmo
+-----------------------------------------------------------------------------------------
+Algoritmo "PREENCHENDO UMA MATRIZ DE 4º ORDEM"
+var
+   m:vetor[1..4,1..4] de inteiro
+   l,c,sdp, p2l,mac: inteiro
+inicio
+sdp<- 0
+p2l<- 1
+para l<- 1 ate 4 faca
+     para c<- 1 ate 4 faca
+          escreva("Digite o valor da Posição {",l,",",c,"}: ")
+          leia(m[l,c])
+          se (l=c) entao
+          sdp <-sdp+m[l,c]// soma dos valores da diagonal principal
+          fimse
+     fimpara
+fimpara
+para l<- 1 ate 4 faca
+     para c<- 1 ate 4 faca
+          escreva(m[l,c]:4)
+     fimpara
+     escreval()
+fimpara
+para c<- 1 ate 4 faca
+     p2l<-p2l*m[2,c]// mostra o produto da segunda linha
+fimpara
+para l<- 1 ate 4 faca
+     se(m[l,3] > mac) entao
+     mac<-m[l,3] // mostra o mairo da terceira coluna
+     fimse
+fimpara
+escreval("Soma dos valores da Diagonal Principal é",sdp)
+escreval("O produto da segunda linha é",p2l)
+escreval("O Maior número da terceira coluna é ",mac)
+fimalgoritmo
+--------------------------------------------------------------------------------------
+algoritmo "teste algoritmo"
+var
+   x,s:real
+   c:inteiro
+   funcao operacao (n:inteiro):real
+inicio
+se(n%2=0) entao
+      x<-n^2
+      senao
+      x<-n/2
+fimse
+     retorne x
+fimfuncao
+inicio
+s<-0
+    para c<-1 ate 3 faca
+    s<-s+ operacao(c)
+fimpara
+escreva(s)
+
+fimalgoritmo
